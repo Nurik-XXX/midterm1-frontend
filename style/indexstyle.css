@@ -1,0 +1,268 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    flex-shrink: 0;
+}
+
+.hero {
+    flex-grow: 1; 
+}
+    
+.footer {
+    flex-shrink: 0;
+}
+body{
+    font-family: 'Heebo';
+}
+
+a{
+    display: inline-block;
+}
+
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.flexB{
+    display: flex;
+    justify-content: space-between;
+}
+.messanger_list{
+    display: flex;
+    align-items: center;
+
+    /* padding-right: 21px; */
+}
+
+.messanger{
+    margin-right: 25px;
+    filter: invert(100%);
+}
+
+.telegram a{
+    width: 19px;
+    height: 15px;
+    background: url("../img/messanger_icons/telegram.svg") no-repeat;
+}
+
+.insta a{
+    width: 19px;
+    height: 19px;
+    background: url("../img/messanger_icons/insta.svg") no-repeat;
+    
+}
+
+
+/* HEADER */
+
+.header{
+    padding: 20px 0;
+
+    background-color: #EDF7FA;
+    border-bottom: 2px solid black;
+
+    margin-bottom: 30px;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.burger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #21243D;
+    transition: all 0.3s ease;
+}
+
+.nav_list{
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.nav_list_item a {
+    text-decoration: none;
+    color: #21243D;
+    font-weight: 500;
+    font-size: 20px;
+    padding-bottom: 5px; 
+    border-bottom: 2px solid transparent; 
+    transition: all 0.5s ease; 
+}
+
+.nav_list_item a:hover {
+    color: #ff7f50; 
+    border-bottom: 2px solid #ff7f50; 
+}
+.active_page a{
+    font-size: 30px; 
+    font-weight: 700;
+    color: #FF6464;
+}
+
+/* FOOTER */
+
+.footer{
+    background-color: #EDF7FA;
+    padding: 25px 10px;
+}
+
+
+/* HERO */
+.hero{
+    margin-top: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-bottom: 30px;
+}
+.hero_container{
+    width: 100%;
+}
+.home_page_content{
+    align-items: center;
+    justify-content: space-around;
+}
+.home_text_block{
+    max-width: 506px;
+}
+.h1, .h2{
+    font-size: 44px;
+    font-weight: 700;
+    color: #21243D;
+}
+.h2{
+    margin-bottom: 20px;
+}
+
+.biography{
+    color: #21243D;
+    font-size: 16px;
+
+
+    margin-bottom: 20px;
+}
+
+.my_blog {
+    color: #FFFFFF;
+    font-size: 20px;
+    background-color: #FF6464;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease; 
+}
+
+.my_blog:hover {
+    background-color: #FF3B3B;
+    transform: translateY(-5px); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.my_blog:active {
+    background-color: #FF1C1C;
+    transform: translateY(2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home_img_block img {
+    width: 300px; 
+    height: 300px; 
+    border-radius: 50%;
+    object-fit: cover; 
+    object-position: 50% 30%; 
+    box-shadow: 0 11px 0px #EDF7FA,
+        -5px -5px 10px #EDF7FA;
+}
+
+@media (max-width: 960px){
+    .header{
+        padding: 17px 0;
+    }
+
+    .nav_list_item a{
+        font-size: 16px;
+    }
+    .active_page a{
+        font-size: 25px; 
+    }
+
+    .home_text_block{
+        max-width: 400px;
+    }
+    .h1, .h2{
+        font-size: 35px;
+    }
+    .home_img_block img{
+        width: 225px;
+        height: 225px;
+    }
+    .my_blog{
+        padding: 7px 15px;
+    }
+}
+
+
+@media (max-width: 670px) {
+    .home_page_content{
+        flex-direction: column-reverse;
+    }
+    .home_img_block{
+        margin-bottom: 30px;
+    }
+    .home_text_block{
+        text-align: center;
+    }
+    .my_blog{
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 550px) {
+    .nav{
+        padding-left: 20px;
+    }
+    .nav_list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 10px;
+        z-index: 10;
+    }
+
+    .nav_list.active {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .home_text_block{
+        padding: 0 20px;
+    }
+    .h1, .h2{
+        font-size: 28px;
+    }
+}
